@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --bg-color: #272727;
+  --calculator-color: #0e0e0e;
+  --color-strong: #000;
+  --display: #87a075;
+  --secondary-color: #ff7f00;
+
+  --button-color-1: #141414;
+  --button-color-2: #313131;
+
+  --button-shadow-1: #cccccc4b;
+  --button-shadow-2: rgba(255, 255, 255, 0.14);
+
+  --color-strong-shadow: #000;
+
+  --font-color: #bebebe;
+
+  /* FONTS*/
+  font-size: 63.5%;
+}
+
+body {
+  font: 400 1.6rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--font-color);
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: background 200ms, color 200ms;
+}
+
+.calculator {
+  background: var(--calculator-color);
+  border: 0.2rem solid var(--font-color);
+  border-radius: 2rem;
+  padding: 2.5rem;
+}
+
+.calculator header {
+  text-align: center;
+  font-size: 2rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.calculator header h1 {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.calculator header span {
+  user-select: none;
+  cursor: pointer;
+
+  transform: rotate(0);
+  transition: transform 250ms;
+}
+.calculator header span:hover {
+  transform: rotate(90deg);
+}
+
+.display {
+  background: var(--display);
+  min-height: 12.5rem;
+  color: black;
+  padding: 2rem;
+  border: 0.2rem double var(--color-strong);
+  box-shadow: 0 0 0.6rem 0.5rem #2524247a, inset 0 0 1rem 0.2rem #090909;
+  border-radius: 5rem;
+
+  text-align: right;
+  margin-bottom: 2.5rem;
+}
+
+.display .bottom-display {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.buttons button {
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(
+    -45deg,
+    var(--button-color-1),
+    var(--button-color-2)
+  );
+  border: 1px solid var(--button-shadow-1);
+  border-radius: 50px;
+  box-shadow: 4px 3px 16px 0 var(--color-strong-shadow),
+    -4px -3px 12px 0 var(--button-shadow-2);
+  font-size: 2rem;
+
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button.operation {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.buttons button.result {
+  background: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.buttons button:active {
+  box-shadow: inset 4px 3px 16px 0 #000;
+}
