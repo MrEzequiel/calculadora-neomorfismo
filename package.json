@@ -1,0 +1,24 @@
+{
+  "name": "calculadora-neomorfismo",
+  "version": "1.0.0",
+  "description": "Calculadora simples, com todas as sua funcionalidades e com design neomorfismo",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-packager . --icon assets/calculator.icns --out=packages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrEzequiel/calculadora-neomorfismo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrEzequiel/calculadora-neomorfismo/issues"
+  },
+  "homepage": "https://github.com/MrEzequiel/calculadora-neomorfismo#readme",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  }
+}

@@ -114,7 +114,7 @@ const removeLastNumber = () => {
 
 const reverseSign = () => {
   isNewNumber = true
-  updateDisplay(displayText.innerText * -1)
+  updateDisplay(parseFloat(displayText.innerText.replace(',', '.')) * -1)
 }
 
 const existDecimal = () => displayText.innerText.indexOf(',') != -1
